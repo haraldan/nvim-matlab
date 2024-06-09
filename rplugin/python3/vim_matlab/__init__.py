@@ -84,7 +84,9 @@ class VimMatlab(object):
         if self.cli_controller is None:
             self.activate_cli()
         path = vim_helper.get_current_file_path()
-
+        if path[0] == '+':
+            path = path[1:]
+            path = path.replace('/','.')
         # debug
         # print(["edit '{}';".format(path)])
         # @hey, remove the entire path...?

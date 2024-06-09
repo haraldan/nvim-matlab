@@ -20,7 +20,7 @@ class PythonVimUtils(object):
 
     @staticmethod
     def get_current_file_path():
-        return vim.eval("expand('%:p')")
+        return vim.eval("fnamemodify(expand('%'), ':.')")
 
     @staticmethod
     def save_current_buffer():
