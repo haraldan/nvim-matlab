@@ -15,6 +15,8 @@ endif
 
 if g:matlab_server_launcher ==? 'tmux' && g:matlab_server_split ==? 'horizontal'
   let s:split_command = ':!tmux split-window '
+elseif g:matlab_server_launcher ==? 'tmux' && g:matlab_server_split ==? 'left_30'
+  let s:split_command = ':!tmux split-window -hbp30 '
 elseif g:matlab_server_launcher ==? 'tmux' && g:matlab_server_split ==? 'vertical'
   let s:split_command = ':!tmux split-window -h '
 elseif g:matlab_server_launcher ==? 'vim' && g:matlab_server_split ==? 'horizontal'
