@@ -38,7 +38,7 @@ class Matlab:
             # self.proc = pexpect.spawn("matlab", env=dict(os.environ),["-nosplash", "-nodesktop"])
             print("loading matlab!\n")
             self.proc = pexpect.spawn(
-                "/home/kolbbond/build/MATLAB/2023b/bin/matlab -nosplash -nodesktop",
+                "matlab -nosplash -nodesktop",
                 env=os.environ)
             # self.proc = pexpect.spawn(
             #        "matlab -nosplash -nodesktop",
